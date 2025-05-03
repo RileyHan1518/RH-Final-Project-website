@@ -1,0 +1,3 @@
+name = "CSV Viewer"
+description = "Displays first and last 5 rows of a CSV."
+packages = ["pandas", "plotly"]

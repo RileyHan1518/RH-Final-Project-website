@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title id="header-title">My Dataset</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+  <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+</head>
+<body>
+  <!-- 🔗 Top Navigation Bar -->
+  <div class="navbar">
+    <a class="title" id="page-title" href="#" style="color:#f0ab3c"></a> <!-- ✅ FIXED LINE -->
+    <a href="index.html">Home</a>
+    <a href="about_me.html">About Me</a>
+    <a href="research.html">My Research</a>
+    <a href="dataset.html">My Dataset</a>
+    <a href="dashboard.html">My Dashboard</a>
+  </div>
+
+  <!-- 📄 Main Content -->
+  <div class="content">
+    <img src="Images/RDH_Logo.png" height="100" alt="Logo"><br>
+    <h2>My Dataset</h2>
+    <p>This dataset includes Olympic weightlifting stats: athlete name, bodyweight, lifts, and gender. Below are the first and last 5 records.</p>
+
+    <div id="page-message"></div>
+
+    <h3>Data Source</h3>
+    <input type="text" id="txt-url" class="py-input" size="80"
+           value="https://raw.githubusercontent.com/RileyHan1518/weightlifting-dataset/main/weightlifting.csv">
+    <button type="submit" id="btn-load" class="py-button" py-click="loadFromURL">Load CSV</button>
+
+    <div id="pandas-output" style="display:none;">
+      <h3>Output</h3>
+      <div id="pandas-output-inner"></div>
+    </div>
+
+    <div id="pandas-dev-console" style="display:none;">
+      <h3>Dev Console</h3>
+      <script type="py" terminal></script>
+    </div>
+
+    <!-- 🔧 PyScript Setup -->
+    <section class="pyscript">
+      <script type="py" src="./main.py" config="./pyscript.toml"></script>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script Language="JavaScript">
+	function popup(url, name, width, height) {
+		settings =
+		"toolbar=no,location=no,directories=no," +
+		"status=no,menubar=no,scrollbars=yes," +
+		"resizable=yes,width=" + width + ",height=" + height;
+		MyNewWindow = window.open("" + url, name, settings);
+	}
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<table style="border-collapse: collapse; width: 100%;" border="0">
+  <tbody>
+    <tr>
+      <td style="width: 5%;">&nbsp;</td>
+      <td style="width: 90%;">&nbsp;</td>
+      <td style="width: 5%;">&nbsp;</td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <div class="navbar">
+          <a href="index.html">Home</a>
+          <a href="about_me.html">About Me</a>
+          <a href="research.html">My Research</a>
+          <a href="dataset.html">My Dataset</a>
+          <a href="dashboard.html">My Dashboard</a>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td style="width: 5%;">&nbsp;</td>
+      <td style="width: 90%;">
+        <div class="content">
+          <img src="Images/RDH_Logo.png" height="100"><br />
+          <h2>My Dashboard</h2>
+
+          <p>The current .csv dataset I am using for my research is:
+            <a href="https://raw.githubusercontent.com/RileyHan1518/weightlifting-dataset/refs/heads/main/weightlifting.csv"><tt>weightlifting.csv</tt></a>
+          </p>
+
+          <p>Below are research relevant queries and graphs.</p>
+
+          <h3>What would you like to know?</h3>
+          <ol>
+            <li><a href="#" onClick="popup('top_heaviest_lifters.html', 'Heavy', 640, 480);">Top 5 Heaviest Lifters</a></li>
+            <li><a href="#" onClick="popup('top_lightest_lifters.html', 'Light', 640, 480);">Top 5 Lightest Lifters</a></li>
+            <li><a href="#" onClick="popup('top_total_lift.html', 'Total', 640, 480);">Top 5 by Total Weight Lifted</a></li>
+            <li><a href="#" onClick="popup('top_lift_to_body_ratio.html', 'Ratio', 640, 480);">Top 5 by Lift-to-Bodyweight Ratio</a></li>
+            <li><a href="#" onClick="popup('strongest_by_lift_type.html', 'Strongest', 640, 480);">Strongest in Each Lift Type</a></li>
+            <li><a href="#" onClick="popup('scatter_weight_vs_body.html', 'Scatter', 800, 600);">[Graph] Weight Lifted vs Bodyweight</a></li>
+            <li><a href="#" onClick="popup('bar_top10_total_lifters.html', 'Top10Bar', 800, 600);">[Graph] Top 10 Lifters (Bar Graph)</a></li>
+            <li><a href="#" onClick="popup('line_avg_total_by_gender.html', 'AvgLine', 800, 600);">[Graph] Avg Total Lift by Gender (Line)</a></li>
+            <li><a href="#" onClick="popup('histogram_body_weight.html', 'Hist', 800, 600);">[Graph] Bodyweight Distribution</a></li>
+            <li><a href="#" onClick="popup('boxplot_lift_distribution.html', 'BoxLift', 800, 600);">[Graph] Lift Distribution (Box)</a></li>
+          </ol>
+        </div>
+      </td>
+      <td style="width: 5%;">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>

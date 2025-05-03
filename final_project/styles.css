@@ -1,0 +1,73 @@
+/* Apply box-sizing to all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5; /* light gray background for contrast */
+  color: #222;
+}
+
+/* Horizontal navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: #000; /* black bar */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Links inside the navbar with Olympic ring colors */
+.navbar a {
+  color: white;
+  padding: 16px 20px;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Olympic hover colors cycle through the Olympic ring colors */
+.navbar a:nth-child(1):hover { background-color: #0085C7; color: white; } /* blue */
+.navbar a:nth-child(2):hover { background-color: #F4C300; color: black; } /* yellow */
+.navbar a:nth-child(3):hover { background-color: #000000; color: white; } /* black */
+.navbar a:nth-child(4):hover { background-color: #009F3D; color: white; } /* green */
+.navbar a:nth-child(5):hover { background-color: #DF0024; color: white; } /* red */
+
+/* Main content */
+.content {
+  margin-top: 70px;  /* Space for the fixed navbar */
+  padding: 30px;
+  text-align: center;
+}
+
+/* Logo image styling */
+.content img {
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Heading styles */
+h2, h3 {
+  color: #222;
+}
+
+/* List style for dashboard */
+ol {
+  list-style: decimal inside;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+ol li {
+  margin: 10px 0;
+  font-size: 18px;
+}
